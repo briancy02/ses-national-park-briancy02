@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-style: italic;
+  background-color: purple;
+  color: white;
+  padding: 20px 0
+}
