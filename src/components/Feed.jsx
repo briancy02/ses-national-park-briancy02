@@ -3,6 +3,8 @@ import './Feed.css'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from 'react'
+
+const req_url = 'https://developer.nps.gov/api/v1/activities?api_key=' + import.meta.env.VITE_NATIONAL_PARK_KEY
 const Feed = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,7 +16,7 @@ const Feed = () => {
   // similar to componentDidMount()
   useEffect(() => {
     
-    fetch('https://developer.nps.gov/api/v1/activities?api_key={import.meta.env.VITE_APP_NATIONAL_PARK_KEY}', { method: 'GET' })
+    fetch(req_url, { method: 'GET' })
       .then(res => res.json())
       .then(
         (result) => {
@@ -32,6 +34,8 @@ const Feed = () => {
       )
   }, [])
 
+  console.log(activities)
+  console.log(req_url)
   console.log(import.meta.env.VITE_NATIONAL_PARK_KEY)
 
   return (
