@@ -4,13 +4,13 @@ import Block from './Block.jsx'
 
 import {useState, useEffect} from 'react'
 
-const req_url = 'https://developer.nps.gov/api/v1/activities?api_key=' + import.meta.env.VITE_NATIONAL_PARK_KEY
 
-const Feed = () => {
+
+const Feed = (props) => {
+  const req_url = 'https://developer.nps.gov/api/v1/'+ props.endpoint + '?api_key=' + import.meta.env.VITE_NATIONAL_PARK_KEY
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const [activities, setActivities] = useState([]);
 
   // Note: the empty deps array [] means
   // this useEffect will run once
@@ -22,8 +22,7 @@ const Feed = () => {
       .then(
         (result) => {
           setIsLoaded(true);
-          setItems(result);
-          setActivities(result.data)
+          setItems(result.data);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -36,14 +35,14 @@ const Feed = () => {
       )
   }, [])
 
-  console.log(activities)
+  console.log(items)
 
   return (
     <div className="feed">
       <ul>
 
-        {activities.map((activity) =>        
-        <Block key={activity.id} title={activity.name}/>)}
+        {items.map((item) =>        
+        <Block key={item.id} title={item.name}/>)}
       </ul>
 
     </div>
