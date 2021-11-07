@@ -1,5 +1,3 @@
-const mySecret = import.meta.env.VITE_NATIONAL_PARK_KEY
-console.log(mySecret)
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
