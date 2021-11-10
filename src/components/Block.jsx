@@ -10,8 +10,6 @@ import {
 } from 'react-router-dom';
 
 const Block = (props) => {
-  const { slug } = useParams();
-  console.log(props.id)
   return (
     <div className="card">
       <Card style={{ width: '18rem' }}>
