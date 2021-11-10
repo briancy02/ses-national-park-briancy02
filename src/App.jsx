@@ -15,9 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/activity" element={<Activity />} />
-        <Route path="/park" element={<Park />} />
+        <Route path="/" element={<Home endpoint="activities" buttonsEndPoint="activity"/>} />
+        <Route path="activity/:id" element={<Activity />} />
+        <Route path="park/:slug" element={<Park />} />
+
+        
       </Routes>
     </BrowserRouter>
   );

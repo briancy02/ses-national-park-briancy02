@@ -8,7 +8,7 @@ function Home(props) {
   return (
     <div>
       <Header />
-      <Feed endpoint="activities" />
+      <Feed endpoint={props.endpoint} buttonsEndPoint={props.buttonsEndPoint}/>
     </div>
   );
 }

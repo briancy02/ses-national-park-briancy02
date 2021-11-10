@@ -42,7 +42,7 @@ const Feed = (props) => {
       <ul>
 
         {items.map((item) =>        
-        <Block key={item.id} title={item.name}/>)}
+        <Block id={item.id} title={item.name} buttonEndPoint={props.buttonsEndPoint}/>)}
       </ul>
 
     </div>

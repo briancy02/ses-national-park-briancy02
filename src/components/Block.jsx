@@ -2,8 +2,16 @@ import React from 'react'
 import './Block.css'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import {Link, Routes, Route} from 'react-router-dom'
+import Activity from './Activity.jsx'
+import {
+  // rest of the elements/components imported remain same
+  useParams
+} from 'react-router-dom';
 
 const Block = (props) => {
+  const { slug } = useParams();
+  console.log(props.id)
   return (
     <div className="card">
       <Card style={{ width: '18rem' }}>
@@ -14,7 +22,9 @@ const Block = (props) => {
             <Card.Text>
             {props.description}
             </Card.Text>
-            <Button variant="primary">Go</Button>
+            <Link to={props.buttonEndPoint + "/" + props.id}>
+              <Button variant="primary">Go</Button>
+            </Link>
           </Card.Body>
         </Card>
     </div>
