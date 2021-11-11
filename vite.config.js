@@ -5,7 +5,7 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
  * @type { import('vite').UserConfig }
  */
 export default {
-  base: 'https://ses-national-park-briancy02.briancy02.repl.co',
+  base: 'https://briancy02.github.io/ses-national-park-briancy02/',
   plugins: [reactRefresh()],
   server: {
     host: '0.0.0.0',
