@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 
 const Block = (props) => {
+  console.log(props.buttonEndPoint + "/" + props.id)
   return (
     <div className="card">
       <Card style={{ width: '18rem' }}>

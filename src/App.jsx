@@ -16,8 +16,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home endpoint="activities" buttonsEndPoint="activity"/>} />
-        <Route path="activity/:id" element={<Activity endpoint="activities/parks"/>} />
-        <Route path="park/:slug" element={<Park />} />
+        <Route path="activity/:id" element={<Activity endpoint="activities/parks" buttonsEndPoint="parks"/>} />
+        <Route path="park/:id" element={<Park endpoint="parks"/>} />
 
         
       </Routes>

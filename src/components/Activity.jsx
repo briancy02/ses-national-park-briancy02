@@ -44,7 +44,7 @@ function Activity(props) {
   return (
     <div>
       <Header />
-      <Feed items={items} endpoint={props.endpoint}/>
+      <Feed items={items} endpoint={props.endpoint} buttonsEndpoint={props.buttonsEndPoint}/>
     </div>
   );
 }
