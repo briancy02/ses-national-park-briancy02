@@ -6,7 +6,6 @@
     "build": "vite build",
     "serve": "vite preview"
   },
-  "homepage": "https://briancy02.github.io/ses-national-park-briancy02",
   "dependencies": {
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
